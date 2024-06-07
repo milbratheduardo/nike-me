@@ -1,6 +1,8 @@
-import { levelOneLogo} from '../assets/images';
-import { hamburger } from '../assets/icons';
+import { logoZsul } from '../assets/images';
+import { hamburger, arrowRight } from '../assets/icons';
 import { navLinks } from '../constants';
+import Button from '../components/Button';  
+
 
 const Nav = () => {
   return (
@@ -8,22 +10,25 @@ const Nav = () => {
         <nav className='flex justify-between items-center max-container'>
             <a href="/">
                 <img 
-                 src={levelOneLogo}
+                 src={logoZsul}
                  alt='Logo'
-                 width={130}
-                 height={29}
+                 width={180}
+                 height={60}
                 />
             </a>
             <ul className='flex-1 flex justify-center items-center 
-            gap-16 max-lg:hidden'>
+            gap-14 max-lg:hidden'>
                 {navLinks.map((item) => (
                     <li key={item.label}>
                         <a href={item.href} className='font-montserrat leading-normal 
-                        text-lg text-slate-gray'>
+                        text-lg text-slate-gray hover:text-gold cursor-pointer'>
                             {item.label}
                         </a>
                     </li>
                 ))}
+                <li>
+                    <Button label="Painel" iconURL={arrowRight} />
+                </li>
             </ul>
             <div className='hidden max-lg:block'>
                 <img 

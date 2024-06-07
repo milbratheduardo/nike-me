@@ -7,6 +7,7 @@ import customer2 from './customer2.svg'
 
 import footerLogo from './footer-logo.svg'
 import levelOneLogo from './level_one_header.svg'
+import logoZsul from './logo_zsul.png'
 
 import offer from './offer.svg'
 
@@ -20,6 +21,8 @@ import thumbnailBackground from './thumbnail-background.svg'
 import thumbnailShoe1 from './thumbnail-shoe1.svg'
 import thumbnailShoe2 from './thumbnail-shoe2.svg'
 import thumbnailShoe3 from './thumbnail-shoe3.svg'
+import background from './background.svg'
+import sobre from './sobre.png'
 
 export {
     bigShoe1,
@@ -28,9 +31,12 @@ export {
 
     customer1,
     customer2,
+    sobre,
 
     footerLogo,
     levelOneLogo,
+    logoZsul,
+    background,
 
     offer,
     shoe4,

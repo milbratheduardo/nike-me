@@ -1,6 +1,6 @@
 const SpecialOffer = () => {
   return (
-    <div>SpecialOffer</div>
+    <div className="bg-gold">SpecialOffer</div>
   )
 }
 
