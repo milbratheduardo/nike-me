@@ -23,6 +23,7 @@ import thumbnailShoe2 from './thumbnail-shoe2.svg'
 import thumbnailShoe3 from './thumbnail-shoe3.svg'
 import background from './background.svg'
 import sobre from './sobre.png'
+import campeonatos_padrao from './campeonatos_padrao.jpg'
 
 export {
     bigShoe1,
@@ -32,6 +33,7 @@ export {
     customer1,
     customer2,
     sobre,
+    campeonatos_padrao,
 
     footerLogo,
     levelOneLogo,

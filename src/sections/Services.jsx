@@ -1,21 +1,49 @@
-import { services } from '../constants'
+import React, { useEffect, useState } from 'react';
 import { arrowRight } from '../assets/icons';
-import ServiceCard from '../components/ServiceCard'
-import Button from '../components/Button'
+import ServiceCard from '../components/ServiceCard';
+import Button from '../components/Button';
+import { campeonatos_padrao } from '../assets/images';
 
 const Services = () => {
+  const [selectedCampeonatos, setSelectedCampeonatos] = useState([]);
+
+  useEffect(() => {
+    const fetchCampeonatos = async () => {
+      try {
+        const response = await fetch(`http://localhost:3000/campeonatos/`);
+        const data = await response.json();
+        console.log("Campeonatos: ", data);
+
+        if (data.data && data.data.length > 0) {
+          const shuffledCampeonatos = data.data.sort(() => 0.5 - Math.random());
+          const selected = shuffledCampeonatos.slice(0, 3);
+          setSelectedCampeonatos(selected);
+        }
+      } catch (error) {
+        console.error("Erro ao buscar campeonatos:", error);
+      }
+    };
+
+    fetchCampeonatos();
+  }, []);
+
   return (
-    <section className="max-container flex flex-col items-center gap-9">
+    <section id='campeonatos' className="max-container flex flex-col items-center gap-9">
       <div className="flex justify-center flex-wrap gap-9">
-        {services.map((service) => (
-          <ServiceCard key={service.label} {...service} />
+        {selectedCampeonatos.map((campeonato) => (
+          <ServiceCard 
+            key={campeonato._id} 
+            label={campeonato.name} 
+            subtext={campeonato.tipoCompeticao} 
+            imgURL={campeonato.pictureBase64 || campeonatos_padrao} 
+          />
         ))}
       </div>
       <div className="w-full flex justify-center mt-9">
-        <Button label="Ver Campeonatos" iconURL={arrowRight} />
+        <Button href='http://localhost:3001/Campeonatos_lp' label="Ver Campeonatos" iconURL={arrowRight} />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;

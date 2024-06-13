@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Button from "../components/Button";
 import { statistics } from '../constants';
 import { bigShoe1 } from '../assets/images';
 
@@ -35,8 +34,7 @@ const Hero = () => {
       </div>
 
     <div className="relative flex-1 flex justify-center
-    items-center xl:min-h-screen max-xl:py-40 bg-primary 
-    bg-hero bg-cover bg-center">
+    items-center xl:min-h-screen max-xl:py-40">
       <img
        src={bigShoeImg}
        alt="Gear Collection"
