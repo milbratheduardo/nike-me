@@ -27,7 +27,7 @@ const Nav = () => {
                     </li>
                 ))}
                 <li>
-                    <Button href='http://localhost:3001/'label="Painel" iconURL={arrowRight} />
+                    <Button href='https://dashboard.zsulesportes.com/'label="Painel" iconURL={arrowRight} />
                 </li>
             </ul>
             <div className='hidden max-lg:block'>

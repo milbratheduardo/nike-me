@@ -10,7 +10,7 @@ const Services = () => {
   useEffect(() => {
     const fetchCampeonatos = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/campeonatos/`);
+        const response = await fetch(`https://painel.zsulesportes.com/campeonatos/`);
         const data = await response.json();
         console.log("Campeonatos: ", data);
 
@@ -40,7 +40,7 @@ const Services = () => {
         ))}
       </div>
       <div className="w-full flex justify-center mt-9">
-        <Button href='http://localhost:3001/Campeonatos_lp' label="Ver Campeonatos" iconURL={arrowRight} />
+        <Button href='https://dashboard.zsulesportes.com/Campeonatos_lp' label="Ver Campeonatos" iconURL={arrowRight} />
       </div>
     </section>
   );
