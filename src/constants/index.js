@@ -6,7 +6,8 @@ export const navLinks = [
     { href: "#about-us", label: "Sobre" },
     { href: "#campeonatos", label: "Campeonatos" },
     { href: "#news", label: "Notícias" },
-    { href: "#players", label: "Atletas" },
+    { href: "#fotos", label: "Fotos" },
+    { href: "https://dashboard.zsulesportes.com/atletas_lp", label: "Atletas", external: true },
 ];
 
 export const shoes = [

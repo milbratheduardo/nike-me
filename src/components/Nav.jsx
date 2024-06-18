@@ -16,20 +16,32 @@ const Nav = () => {
                  height={60}
                 />
             </a>
-            <ul className='flex-1 flex justify-center items-center 
-            gap-14 max-lg:hidden'>
-                {navLinks.map((item) => (
-                    <li key={item.label}>
-                        <a href={item.href} className='font-montserrat leading-normal 
-                        text-lg text-slate-gray hover:text-gold cursor-pointer'>
+            <ul className='flex-1 flex justify-center items-center gap-14 max-lg:hidden'>
+            {navLinks.map((item) => (
+                <li key={item.label}>
+                    {item.external ? (
+                        <a 
+                            href={item.href} 
+                            className='font-montserrat leading-normal text-lg text-slate-gray hover:text-gold cursor-pointer' 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                        >
                             {item.label}
                         </a>
-                    </li>
-                ))}
-                <li>
-                    <Button href='https://dashboard.zsulesportes.com/'label="Painel" iconURL={arrowRight} />
+                    ) : (
+                        <a 
+                            href={item.href} 
+                            className='font-montserrat leading-normal text-lg text-slate-gray hover:text-gold cursor-pointer'
+                        >
+                            {item.label}
+                        </a>
+                    )}
                 </li>
-            </ul>
+            ))}
+            <li>
+                <Button href='https://dashboard.zsulesportes.com/' label="Painel" iconURL={arrowRight} />
+            </li>
+        </ul>
             <div className='hidden max-lg:block'>
                 <img 
                   src={hamburger}  

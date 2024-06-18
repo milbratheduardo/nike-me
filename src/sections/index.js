@@ -7,6 +7,8 @@ import SpecialOffer from './SpecialOffer';
 import Subscribe from './Subscribe';
 import SuperQuality from './SuperQuality';
 import Parceiros from './Parceiros';
+import Noticias from './Noticias';
+import Fotos from './Fotos';
 
 export {
     Hero,
@@ -17,5 +19,7 @@ export {
     Footer,
     SpecialOffer,
     Subscribe, 
-    Parceiros
+    Parceiros,
+    Noticias,
+    Fotos
 }
