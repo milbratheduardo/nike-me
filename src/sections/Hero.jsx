@@ -9,19 +9,20 @@ const Hero = () => {
       id='home'
       className='w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container'
     >
-      <div className='relative xl:w-2/5 flex flex-col justify-center items-start w-full  max-xl:padding-x pt-28'>
-        <h1 className='mt-10 font-palanquin text-8xl max-sm:text-[72px] max-sm:leading-[82px] font-bold'>
-          <span className='xl:bg-white xl:whitespace-nowrap relative z-10 pr-10'>
+      <div className='relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28'>
+    <h1 className='mt-10 font-palanquin text-8xl max-sm:text-[72px] max-sm:leading-[82px] font-bold'>
+        <span className='xl:bg-white xl:whitespace-nowrap relative z-9 pr-10'>
             Zona Sul
-          </span>
-          <br />
-          <span className='text-gold inline-block mt-3'>Esportes</span>
-        </h1>
-        <p className='font-montserrat text-slate-gray text-lg leading-8 mt-6 mb-14 sm:max-w-sm'>
+        </span>
+        <br />
+        <span className='text-gold inline-block mt-3'>Esportes</span>
+    </h1>
+    <p className='font-montserrat text-slate-gray text-lg leading-8 mt-6 mb-14 sm:max-w-sm'>
         Somos uma empresa especializada em gerenciamento de campeonatos de base.
-        </p>
+    </p>
 
-        <div className='flex justify-start items-start flex-wrap w-full mt-20 gap-16'>
+
+        <div className='flex justify-start items-start flex-wrap w-full mt-20 gap-8'>
           {statistics.map((stat, index) => (
             <div key={index}>
               <p className='text-4xl font-palanquin font-bold'>{stat.value}</p>

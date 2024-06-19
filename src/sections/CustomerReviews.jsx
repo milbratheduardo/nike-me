@@ -12,7 +12,7 @@ const CustomerReviews = () => {
           <span className="text-gold"> ZSUL Esportes </span>
       </p>
       <div className="w-full flex justify-center mt-9">
-        <Button label="Segue Lá!" iconURL={arrowRight} />
+        <Button href="https://www.instagram.com/zsul_esportes/" label="Segue Lá!" iconURL={arrowRight} />
       </div>
 
     </section>

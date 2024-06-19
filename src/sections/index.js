@@ -9,6 +9,7 @@ import SuperQuality from './SuperQuality';
 import Parceiros from './Parceiros';
 import Noticias from './Noticias';
 import Fotos from './Fotos';
+import Equipes from './Equipes'
 
 export {
     Hero,
@@ -21,5 +22,6 @@ export {
     Subscribe, 
     Parceiros,
     Noticias,
-    Fotos
+    Fotos, 
+    Equipes
 }

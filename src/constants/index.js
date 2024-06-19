@@ -1,14 +1,34 @@
 import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
-import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
+import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7,
+     thumbnailShoe1, thumbnailShoe2, thumbnailShoe3, neca_esporte, Unimed_litoralsul } from "../assets/images";
 
 export const navLinks = [
     { href: "#home", label: "Home" },
-    { href: "#about-us", label: "Sobre" },
-    { href: "#campeonatos", label: "Campeonatos" },
+    { 
+        href: "#", 
+        label: "Campeonatos",
+        subLinks: [
+            { href: "#campeonatos", label: "Campeonatos Em Andamento" },
+            { href: "#", label: "Campeonatos Finalizados" },
+            { href: "https://docs.google.com/document/d/1NMkbIosEy2_PvUZT41fafTgEOtKZJSEo_ZME2rXt4Uc/edit?usp=sharing", label: "Tabela de Jogos", external: true},
+            { href: "#", label: "Regulamentos" }
+        ]
+    },
+    {
+        href:"#",
+        label:"Equipes",
+        subLinks: [
+            { href: "/equipes", label: "Equipes" },
+            { href: "#", label: "Ranking" },
+        ]
+    },
     { href: "#news", label: "Notícias" },
     { href: "#fotos", label: "Fotos" },
     { href: "https://dashboard.zsulesportes.com/atletas_lp", label: "Atletas", external: true },
 ];
+
+
+
 
 export const shoes = [
     {
@@ -27,8 +47,8 @@ export const shoes = [
 
 export const statistics = [
     { value: '20+', label: 'Campeonatos' },
-    { value: '150+', label: 'Jogos' },
-    { value: '500+', label: 'Atletas' },
+    { value: '1.000+', label: 'Jogos' },
+    { value: '10.000+', label: 'Atletas' },
 ];
 
 export const products = [
@@ -56,19 +76,16 @@ export const products = [
 
 export const services = [
     {
-        imgURL: truckFast,
-        label: "Free shipping",
-        subtext: "Enjoy seamless shopping with our complimentary shipping service."
+        imgURL: neca_esporte,
+        label: "Neca Esporte",
+        subtext: "A Loja de Esportes Mais Completa da Cidade!",
+        link: "https://www.instagram.com/necaesporte/"
     },
     {
-        imgURL: shieldTick,
-        label: "Secure Payment",
-        subtext: "Experience worry-free transactions with our secure payment options."
-    },
-    {
-        imgURL: support,
-        label: "Love to help you",
-        subtext: "Our dedicated team is here to assist you every step of the way."
+        imgURL: Unimed_litoralsul,
+        label: "Unimed - Litoral Sul/RS",
+        subtext: "Aqui tem Gente. Aqui tem Vida. Aqui tem Unimed.",
+        link: "https://www.instagram.com/unimedlitoralsul.rs/"
     },
 ];
 
