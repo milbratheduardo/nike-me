@@ -1,41 +1,44 @@
 import React, { useEffect, useState } from 'react';
-import { arrowRight } from '../assets/icons';
-import ServiceCard from '../components/ServiceCard';
-import Button from '../components/Button';
-import { campeonatos_padrao } from '../assets/images';
+import EquipeCard from '../components/EquipeCard';
+import { campeonatos_padrao } from '../assets/images'; // Certifique-se de ajustar o caminho da imagem padrão, se necessário
+
+
+const instagramLinks = {
+  "60d0fe4f5311236168a109ca": "https://instagram.com/teamA",
+  "60d0fe4f5311236168a109cb": "https://instagram.com/teamB",
+  "60d0fe4f5311236168a109cc": "https://instagram.com/teamC",
+  // Adicione mais mapeamentos conforme necessário
+};
 
 const Equipes = () => {
-  const [selectedCampeonatos, setSelectedCampeonatos] = useState([]);
+  const [usuarios, setUsuarios] = useState([]);
 
   useEffect(() => {
-    const fetchCampeonatos = async () => {
+    const fetchUsuarios = async () => {
       try {
-        const response = await fetch(`https://painel.zsulesportes.com/campeonatos/`);
+        const response = await fetch(`https://painel.zsulesportes.com/users/`);
         const data = await response.json();
-        console.log("Campeonatos: ", data);
+        console.log("Usuarios: ", data);
 
-        if (data.data && data.data.length > 0) {
-          const shuffledCampeonatos = data.data.sort(() => 0.5 - Math.random());
-          const selected = shuffledCampeonatos.slice(0, 3);
-          setSelectedCampeonatos(selected);
-        }
+        const filteredUsuarios = data.data.filter(usuario => usuario.permission === 'TEquipe');
+        setUsuarios(filteredUsuarios);
       } catch (error) {
-        console.error("Erro ao buscar campeonatos:", error);
+        console.error("Erro ao buscar usuários:", error);
       }
     };
 
-    fetchCampeonatos();
+    fetchUsuarios();
   }, []);
 
   return (
     <section id='' className="max-container flex flex-col items-center gap-4 pt-36">
       <div className="flex justify-center flex-wrap gap-9">
-        {selectedCampeonatos.map((campeonato) => (
-          <ServiceCard 
-            key={campeonato._id} 
-            label={campeonato.name} 
-            subtext={campeonato.tipoCompeticao} 
-            imgURL={campeonato.pictureBase64 || campeonatos_padrao} 
+        {usuarios.map((usuario) => (
+          <EquipeCard 
+            key={usuario._id} 
+            label={usuario.teamName} 
+            subtext={usuario.city} 
+            imgURL={usuario.pictureBase64 || campeonatos_padrao} 
           />
         ))}
       </div>

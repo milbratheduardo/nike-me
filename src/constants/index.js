@@ -15,12 +15,8 @@ export const navLinks = [
         ]
     },
     {
-        href:"#",
+        href:"/equipes",
         label:"Equipes",
-        subLinks: [
-            { href: "/equipes", label: "Equipes" },
-            { href: "#", label: "Ranking" },
-        ]
     },
     { href: "http://localhost:5173/#news", label: "Notícias" },
     { href: "http://localhost:5173/#fotos", label: "Fotos" },
@@ -88,6 +84,7 @@ export const services = [
         link: "https://www.instagram.com/unimedlitoralsul.rs/"
     },
 ];
+
 
 export const reviews = [
     {
