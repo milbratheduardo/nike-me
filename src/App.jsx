@@ -1,10 +1,9 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { CustomerReviews, Footer, Hero, PopularProducts, Services,
-SpecialOffer, SuperQuality, Subscribe, Parceiros,
-Noticias,
-Fotos, Equipes } from './sections';
-
+import { CustomerReviews, Footer, Hero, PopularProducts, Services, 
+  SpecialOffer, SuperQuality, Subscribe, Parceiros, Noticias, Fotos, 
+  Equipes, News, NoticiaDetalhes, FotosDetalhes, 
+  Pictures} from './sections';
 import Nav from './components/Nav';
 
 const App = () => (
@@ -40,6 +39,10 @@ const App = () => (
         </>
       } />
       <Route path="/equipes" element={<Equipes />} />
+      <Route path="/noticias" element={<News />} />
+      <Route path="/noticias/:id" element={<NoticiaDetalhes />} />
+      <Route path="/fotos/:id" element={<FotosDetalhes />} />
+      <Route path="/fotos/" element={<Pictures />} />
     </Routes>
   </main>
 );

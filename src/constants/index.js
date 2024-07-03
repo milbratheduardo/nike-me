@@ -18,8 +18,8 @@ export const navLinks = [
         href:"/equipes",
         label:"Equipes",
     },
-    { href: "http://localhost:5173/#news", label: "Notícias" },
-    { href: "http://localhost:5173/#fotos", label: "Fotos" },
+    { href: "/noticias", label: "Notícias" },
+    { href: "/fotos", label: "Fotos" },
     { href: "https://dashboard.zsulesportes.com/atletas_lp", label: "Atletas", external: true },
 ];
 

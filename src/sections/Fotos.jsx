@@ -43,11 +43,12 @@ const Fotos = () => {
             label={foto.titulo} 
             subtext={foto.instagram} 
             imgURL={foto.foto || campeonatos_padrao} 
+            link={`/fotos/${foto._id}`}
           />
         ))}
       </div>
       <div className="w-full flex justify-center mt-9">
-        <Button href='https://dashboard.zsulesportes.com/Campeonatos_lp' label="Ver Fotos" iconURL={arrowRight} />
+        <Button href='/fotos' label="Ver Fotos" iconURL={arrowRight} />
       </div>
       </>
       )}

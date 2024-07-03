@@ -9,7 +9,11 @@ import SuperQuality from './SuperQuality';
 import Parceiros from './Parceiros';
 import Noticias from './Noticias';
 import Fotos from './Fotos';
-import Equipes from './Equipes'
+import Equipes from './Equipes';
+import News from './News';
+import NoticiaDetalhes from './NoticiaDetalhe';
+import FotosDetalhes from './FotosDetalhes';
+import Pictures from './Pictures';
 
 export {
     Hero,
@@ -23,5 +27,9 @@ export {
     Parceiros,
     Noticias,
     Fotos, 
-    Equipes
+    Equipes,
+    News,
+    NoticiaDetalhes,
+    FotosDetalhes,
+    Pictures
 }

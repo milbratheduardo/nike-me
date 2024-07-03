@@ -45,11 +45,12 @@ const Noticias = () => {
                 label={noticia.titulo} 
                 subtext={noticia.subtitulo} 
                 imgURL={noticia.imagem || campeonatos_padrao} 
+                link={`/noticias/${noticia._id}`}
               />
             ))}
           </div>
           <div className="w-full flex justify-center mt-9">
-            <Button href='https://dashboard.zsulesportes.com/Campeonatos_lp' label="Ver Noticias" iconURL={arrowRight} />
+            <Button href='/noticias' label="Ver Noticias" iconURL={arrowRight} />
           </div>
         </>
       )}
