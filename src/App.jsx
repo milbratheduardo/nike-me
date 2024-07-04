@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { CustomerReviews, Footer, Hero, PopularProducts, Services, 
   SpecialOffer, SuperQuality, Subscribe, Parceiros, Noticias, Fotos, 
   Equipes, News, NoticiaDetalhes, FotosDetalhes, 
-  Pictures} from './sections';
+  Pictures, InstagramFotos} from './sections';
 import Nav from './components/Nav';
 
 const App = () => (
@@ -43,6 +43,7 @@ const App = () => (
       <Route path="/noticias/:id" element={<NoticiaDetalhes />} />
       <Route path="/fotos/:id" element={<FotosDetalhes />} />
       <Route path="/fotos/" element={<Pictures />} />
+      <Route path="/fotos/:instagram" element={<InstagramFotos />} />
     </Routes>
   </main>
 );

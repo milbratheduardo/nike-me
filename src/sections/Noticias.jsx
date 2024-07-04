@@ -11,7 +11,7 @@ const Noticias = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/blog/`);
+        const response = await fetch(`https://api.zsulesportes.com/blog/`);
         const data = await response.json();
         console.log("Noticias: ", data);
 

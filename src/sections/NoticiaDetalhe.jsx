@@ -9,7 +9,7 @@ const NoticiaDetalhes = () => {
   useEffect(() => {
     const fetchNoticia = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/blog/${id}`);
+        const response = await fetch(`https://api.zsulesportes.com/blog/${id}`);
         const data = await response.json();
         setNoticia(data.data);
       } catch (error) {

@@ -10,7 +10,7 @@ const Services = () => {
   useEffect(() => {
     const fetchCampeonatos = async () => {
       try {
-        const response = await fetch(`https://painel.zsulesportes.com/campeonatos/`);
+        const response = await fetch(`https://api.zsulesportes.com/campeonatos/`);
         const data = await response.json();
         console.log("Campeonatos: ", data);
 

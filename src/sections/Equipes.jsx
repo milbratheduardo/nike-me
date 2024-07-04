@@ -51,6 +51,7 @@ const Equipes = () => {
             subtext={usuario.city} 
             imgURL={usuario.pictureBase64 || campeonatos_padrao} 
             href={instagramLinks[usuario._id] || '#'}
+            id = {usuario._id}
           />
         ))}
       </div>

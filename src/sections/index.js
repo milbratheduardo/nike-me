@@ -14,6 +14,7 @@ import News from './News';
 import NoticiaDetalhes from './NoticiaDetalhe';
 import FotosDetalhes from './FotosDetalhes';
 import Pictures from './Pictures';
+import InstagramFotos from './InstagramFotos';
 
 export {
     Hero,
@@ -31,5 +32,6 @@ export {
     News,
     NoticiaDetalhes,
     FotosDetalhes,
-    Pictures
+    Pictures, 
+    InstagramFotos
 }

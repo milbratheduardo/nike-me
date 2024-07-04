@@ -9,7 +9,7 @@ const Pictures = () => {
   useEffect(() => {
     const fetchFoto = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/fotografo/`);
+        const response = await fetch(`https://api.zsulesportes.com/fotografo/`);
         const data = await response.json();
         console.log("Fotos: ", data);
 

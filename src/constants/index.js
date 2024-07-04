@@ -3,12 +3,12 @@ import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6
      thumbnailShoe1, thumbnailShoe2, thumbnailShoe3, neca_esporte, Unimed_litoralsul } from "../assets/images";
 
 export const navLinks = [
-    { href: "http://localhost:5173/#home", label: "Home" },
+    { href: "/#home", label: "Home" },
     { 
         href: "#", 
         label: "Campeonatos",
         subLinks: [
-            { href: "http://localhost:5173/#campeonatos", label: "Campeonatos Em Andamento" },
+            { href: "/#campeonatos", label: "Campeonatos Em Andamento" },
             { href: "#", label: "Campeonatos Finalizados" },
             { href: "https://docs.google.com/document/d/1NMkbIosEy2_PvUZT41fafTgEOtKZJSEo_ZME2rXt4Uc/edit?usp=sharing", label: "Tabela de Jogos", external: true},
             { href: "#", label: "Regulamentos" }
