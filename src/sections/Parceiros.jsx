@@ -1,12 +1,14 @@
 import { services } from '../constants'
-import { arrowRight } from '../assets/icons';
 import ParceiroCard from '../components/ParceiroCard'
-import Button from '../components/Button'
 
 const Parceiros = () => {
   return (
-    <section className="max-container flex flex-col items-center gap-9">
-      <div className="flex justify-center flex-wrap gap-9">
+    <section className="max-container flex flex-col items-center border-t border-gold gap-9">
+      <h3 className="font-palanquin text-center text-4xl font-bold mt-10">
+        Patrocinadores 
+        <span className="text-gold"> 2024 </span>
+      </h3>
+      <div className="flex justify-center flex-wrap gap-9 mt-6">
         {services.map((service) => (
           <ParceiroCard key={service.label} {...service} />
         ))}
@@ -16,3 +18,4 @@ const Parceiros = () => {
 }
 
 export default Parceiros
+

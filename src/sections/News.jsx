@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import NewsCard from '../components/NewsCard';
 import { campeonatos_padrao } from '../assets/images';
+import Footer from './Footer';
 
 const News = () => {
   const [noticias, setNoticias] = useState([]);
@@ -9,7 +10,7 @@ const News = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/blog/`);
+        const response = await fetch(`https://api.zsulesportes.com/blog/`);
         const data = await response.json();
         console.log("Noticias: ", data);
 
@@ -33,8 +34,8 @@ const News = () => {
     <section id='news' className="max-container flex flex-col items-center gap-9 pt-36">
       {isEmpty ? (
         <p></p>
-      ) : (
-        <div className="flex justify-center flex-wrap gap-9">
+      ) : (       
+        <div className="flex justify-center flex-wrap mt-25 gap-9">
           {noticias.map((noticia) => (
             <NewsCard 
               key={noticia._id} 
@@ -46,6 +47,7 @@ const News = () => {
           ))}
         </div>
       )}
+      <Footer />
     </section>
   );
 };

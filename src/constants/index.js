@@ -10,8 +10,8 @@ export const navLinks = [
         subLinks: [
             { href: "/#campeonatos", label: "Campeonatos Em Andamento" },
             { href: "#", label: "Campeonatos Finalizados" },
-            { href: "https://docs.google.com/document/d/1NMkbIosEy2_PvUZT41fafTgEOtKZJSEo_ZME2rXt4Uc/edit?usp=sharing", label: "Tabela de Jogos", external: true},
-            { href: "#", label: "Regulamentos" }
+            { href: "https://docs.google.com/document/d/1exxdBgaWM69MxxymR2GoB3ZC2t6hThsIZ-LZt1Fkz7g/edit?usp=sharing", label: "Tabela de Jogos", external: true},
+            { href: "https://drive.google.com/file/d/1jvig2flLKjUerhfvjF6cG_djcTFNYXx9/view?usp=sharing", label: "Regulamento", external: true },
         ]
     },
     {

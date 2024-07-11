@@ -10,8 +10,9 @@ const ModalEstatisticas = ({ id, onClose, isVisible }) => {
 
   useEffect(() => {
     const fetchUserInfo = async () => {
+      console.log('ID: ', id)
       try {
-        const response = await fetch(`http://localhost:3000/users/${id}`);
+        const response = await fetch(`https://api.zsulesportes.com/users/${id}`);
         if (response.ok) {
           const data = await response.json();
           setUserInfo(data);
@@ -31,7 +32,7 @@ const ModalEstatisticas = ({ id, onClose, isVisible }) => {
   useEffect(() => {
     const fetchCampeonatosInscritos = async () => {
       try {
-        const response = await fetch(`https://api.zsulesportes/inscricoes/`);
+        const response = await fetch(`https://api.zsulesportes.com/inscricoes/`);
         const data = await response.json();
         const inscricoesFiltradas = data.data.filter(inscricao => inscricao.userId === id);
         setInscricoes(inscricoesFiltradas);

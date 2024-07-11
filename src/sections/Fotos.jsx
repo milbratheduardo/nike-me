@@ -18,12 +18,18 @@ const Fotos = () => {
         if (data.data.length === 0) {
           setIsEmpty(true);
         } else {
-        const ultimasFotos = data.data.reverse().slice(0, 3);
-        setFoto(ultimasFotos);
+          // Filtra as fotos onde instagram !== "porto"
+          const fotosFiltradas = data.data.filter(foto => foto.instagram !== "porto");
+          if (fotosFiltradas.length === 0) {
+            setIsEmpty(true);
+          } else {
+            const ultimasFotos = fotosFiltradas.reverse().slice(0, 3);
+            setFoto(ultimasFotos);
+          }
         }
 
       } catch (error) {
-        console.error("Erro ao buscar notícias:", error);
+        console.error("Erro ao buscar fotos:", error);
       }
     };
 
@@ -36,21 +42,24 @@ const Fotos = () => {
         <p></p>
       ) : (
         <>
-      <div className="flex justify-center flex-wrap gap-9 mt-10">
-        {fotos.map((foto) => (
-          <FotoCard 
-            key={foto._id} 
-            label={foto.titulo} 
-            subtext={foto.instagram} 
-            imgURL={foto.foto || campeonatos_padrao} 
-            link={`/fotos/${foto._id}`}
-          />
-        ))}
-      </div>
-      <div className="w-full flex justify-center mt-9">
-        <Button href='/fotos' label="Ver Fotos" iconURL={arrowRight} />
-      </div>
-      </>
+          <h3 className="font-palanquin text-center text-4xl font-bold mt-10"> 
+            <span className="text-gold"> Fotos </span>
+          </h3>
+          <div className="flex justify-center flex-wrap gap-9 mt-10">
+            {fotos.map((foto) => (
+              <FotoCard 
+                key={foto._id} 
+                label={foto.nome} 
+                subtext={foto.instagram} 
+                imgURL={foto.foto || campeonatos_padrao} 
+                link={`/fotos/${foto._id}`}
+              />
+            ))}
+          </div>
+          <div className="w-full flex justify-center mt-9">
+            <Button href='/fotos' label="Ver Fotos" iconURL={arrowRight} />
+          </div>
+        </>
       )}
     </section>
   );

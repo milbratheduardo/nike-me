@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { campeonatos_padrao } from '../assets/images';
 import PicCard from '../components/PicCard';
+import PicGaleria from '../components/PicGaleria';
+import Footer from './Footer';
 
 const Pictures = () => {
   const [fotos, setFotos] = useState([]);
+  const [portoFotos, setPortoFotos] = useState([]);
   const [isEmpty, setIsEmpty] = useState(false);
 
   useEffect(() => {
@@ -16,8 +19,16 @@ const Pictures = () => {
         if (data.data.length === 0) {
           setIsEmpty(true);
         } else {
-          const groupedFotos = groupByInstagram(data.data);
-          setFotos(groupedFotos);
+          const filteredData = data.data.filter(foto => foto.instagram !== "porto");
+          const portoData = data.data.filter(foto => foto.instagram === "porto");
+
+          if (filteredData.length === 0) {
+            setIsEmpty(true);
+          } else {
+            const groupedFotos = groupByInstagram(filteredData);
+            setFotos(groupedFotos);
+          }
+          setPortoFotos(portoData);
         }
       } catch (error) {
         console.error("Erro ao buscar fotos:", error);
@@ -45,10 +56,12 @@ const Pictures = () => {
       {isEmpty ? (
         <p>Nenhuma foto encontrada.</p>
       ) : (
+        <>
         <div className="flex justify-center flex-wrap gap-9 mt-10">
           {fotos.map((foto) => (
             <PicCard 
               key={foto.foto._id} 
+              nome={foto.foto.nome}
               label={foto.foto.instagram} 
               subtext={`Quantidade de fotos: ${foto.count}`} 
               imgURL={foto.foto.foto || campeonatos_padrao} 
@@ -56,7 +69,27 @@ const Pictures = () => {
             />
           ))}
         </div>
+        {portoFotos.length > 0 && (
+            <div className="mt-10 w-full">
+              <h3 className="font-palanquin text-center text-4xl font-bold mt-10">
+                <span className="text-gold">Galeria ZSul Esportes</span>
+              </h3>
+              <div className="flex justify-center flex-wrap gap-9 mt-6">
+                {portoFotos.map((foto) => (
+                  <PicGaleria 
+                    key={foto._id} 
+                    nome={foto.nome}
+                    label={foto.instagram} 
+                    imgURL={foto.foto || campeonatos_padrao} 
+                    link={`/fotos/${foto._id}`}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+        </>
       )}
+      <Footer />
     </section>
   );
 };

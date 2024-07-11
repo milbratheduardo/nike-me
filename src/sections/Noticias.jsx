@@ -38,6 +38,10 @@ const Noticias = () => {
         <p></p>
       ) : (
         <>
+          <h3 className="font-palanquin text-center text-4xl font-bold mt-10">
+            Confira as Últimas 
+            <span className="text-gold"> Notícias </span>
+          </h3>
           <div className="flex justify-center flex-wrap gap-9">
             {noticias.map((noticia) => (
               <NewsCard 

@@ -1,4 +1,4 @@
-import { sobre } from '../assets/images';
+import { sobre, sobre_nos } from '../assets/images';
 const SuperQuality = () => {
   return (
     <section
@@ -28,7 +28,7 @@ const SuperQuality = () => {
 
       <div className="flex-1 flex justify-center items-center">
         <img 
-          src={sobre}
+          src={sobre_nos}
           alt="shoe8"
           width={570}
           height={522}

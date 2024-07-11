@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { statistics } from '../constants';
-import { bigShoe1 } from '../assets/images';
+import { bigShoe1, mosaico } from '../assets/images';
 
 const Hero = () => {
   const [bigShoeImg, setBigShoeImg] = useState(bigShoe1);
@@ -37,7 +37,7 @@ const Hero = () => {
     <div className="relative flex-1 flex justify-center
     items-center xl:min-h-screen max-xl:py-40">
       <img
-       src={bigShoeImg}
+       src={mosaico}
        alt="Gear Collection"
        width={610}
        height={500}
