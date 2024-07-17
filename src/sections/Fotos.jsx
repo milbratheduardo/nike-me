@@ -49,7 +49,7 @@ const Fotos = () => {
             {fotos.map((foto) => (
               <FotoCard 
                 key={foto._id} 
-                label={foto.nome} 
+                label={foto.nome}
                 subtext={foto.instagram} 
                 imgURL={foto.foto || campeonatos_padrao} 
                 link={`/fotos/${foto._id}`}

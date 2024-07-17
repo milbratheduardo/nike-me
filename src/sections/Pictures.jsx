@@ -63,6 +63,7 @@ const Pictures = () => {
               key={foto.foto._id} 
               nome={foto.foto.nome}
               label={foto.foto.instagram} 
+              instagram={foto.foto.titulo}
               subtext={`Quantidade de fotos: ${foto.count}`} 
               imgURL={foto.foto.foto || campeonatos_padrao} 
               link={`/fotos/${foto.foto._id}`}
