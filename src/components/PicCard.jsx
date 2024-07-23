@@ -22,7 +22,7 @@ const PicCard = ({ imgURL, label, subtext, link, nome, instagram }) => {
             <img src={imgURL} alt={label} width={200} height={200} className="object-cover"/>
         </div>
         <h3 className='mt-5 font-palanquin text-3xl leading-normal font-bold text-center'>{nome}</h3>
-        <p className='mt-3 break-words font-montserrat text-lg leading-normal text-slate-gray text-center'>{label}</p>
+        <p className='mt-3 font-montserrat text-lg leading-normal text-slate-gray break-words max-w-full text-center'>{label}</p>
     
         <div className="w-full flex justify-center mt-9">
         <ButtonOut href= {formattedLabel} label="Veja!" iconURL={arrowRight} />

@@ -1,30 +1,6 @@
 import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
 import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7,
-     thumbnailShoe1, thumbnailShoe2, thumbnailShoe3, neca_esporte, Unimed_litoralsul } from "../assets/images";
-
-export const navLinks = [
-    { href: "/#home", label: "Home" },
-    { 
-        href: "#", 
-        label: "Campeonatos",
-        subLinks: [
-            { href: "/#campeonatos", label: "Campeonatos Em Andamento" },
-            { href: "#", label: "Campeonatos Finalizados" },
-            { href: "https://docs.google.com/document/d/1exxdBgaWM69MxxymR2GoB3ZC2t6hThsIZ-LZt1Fkz7g/edit?usp=sharing", label: "Tabela de Jogos", external: true},
-            { href: "https://drive.google.com/file/d/1jvig2flLKjUerhfvjF6cG_djcTFNYXx9/view?usp=sharing", label: "Regulamento", external: true },
-        ]
-    },
-    {
-        href:"/equipes",
-        label:"Equipes",
-    },
-    { href: "/noticias", label: "Notícias" },
-    { href: "/fotos", label: "Fotos" },
-    { href: "https://dashboard.zsulesportes.com/atletas_lp", label: "Atletas", external: true },
-];
-
-
-
+     thumbnailShoe1, thumbnailShoe2, thumbnailShoe3, neca_esporte, Unimed_litoralsul } from "../assets/images";  
 
 export const shoes = [
     {
