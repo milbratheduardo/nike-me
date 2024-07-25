@@ -17,7 +17,7 @@ const Nav = () => {
       try {
         const response = await fetch('https://api.zsulesportes.com/link/tabela');
         const data = await response.json();
-        setTabelaLink(data.data.link);
+        setTabelaLink(data.data[0].link);
       } catch (error) {
         console.error("Error fetching tabela link:", error);
       }
